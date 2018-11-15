@@ -1,0 +1,31 @@
+[user]
+	name = NOM Prenom
+	email = prenom.nom@email.com
+[alias]
+  lola		= log --graph --pretty=customformat --abbrev-commit --all
+  lol		= log --graph --pretty=customformat --abbrev-commit --all -30
+  lolone	= log --graph --pretty=customformat --abbrev-commit
+  lolorigine		= log --graph --pretty=originalcommit --abbrev-commit --all
+  showFile	= show --name-only
+  diffFile	= diff --name-only
+  trackfile	= log --follow -p
+  rbc		= rebase --continue
+  rba		= rebase --abort
+  cp		= cherry-pick
+  cpc		= cherry-pick --continue
+  cpa		= cherry-pick --abort
+  st		= status
+  co		= checkout
+  delOrigin	= push origin --delete
+  showBranchAndOrigin = branch -vv
+[push]
+	default = simple
+[core]
+	excludesfile = "C:\\users\\xNom\\.gitignore_global"
+	autocrlf = true
+	whitespace = cr-at-eol
+[pretty]
+	customformat 	= %C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset
+	originalcommit 	= %C(yellow)%h%Creset -%C(auto)%d%Creset %s %Cgreen(%ad - %ar) %C(bold blue)<%an>%Creset
+[log]
+	date=format:%d/%m/%y-%H:%M:%S
